@@ -1,0 +1,14 @@
+String reverseText(String text) {
+  return text.split('').reversed.join();
+}
+
+String formatCpf(int cpf) {
+  String parsedCpf = cpf.toString();
+  return '${parsedCpf.substring(0, 3)}.${parsedCpf.substring(3, 6)}.${parsedCpf.substring(6, 9)}-${parsedCpf.substring(9)}';
+}
+
+String minifyText(text) {
+  List wordsList = text.split(' ');
+  wordsList.forEach((e) => e.trim());
+  return wordsList.join();
+}
